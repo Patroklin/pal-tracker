@@ -13,10 +13,10 @@ public class EnvController {
     private final String port, memory, instanceIndex, instanceAddress;
 
     public EnvController(
-            @Value("port:NOT SET") String port,
-            @Value("memory.limit:NOT SET") String memory,
-            @Value("cf.instance.index:NOT SET") String instanceIndex,
-            @Value("cf.instance.addr:NOT SET") String instanceAddress) {
+            @Value("${port:NOT SET}") String port,
+            @Value("${memory.limit:NOT SET}") String memory,
+            @Value("${cf.instance.index:NOT SET}") String instanceIndex,
+            @Value("${cf.instance.addr:NOT SET}") String instanceAddress) {
         this.port = port;
         this.memory = memory;
         this.instanceIndex = instanceIndex;
